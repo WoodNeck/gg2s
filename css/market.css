@@ -1,0 +1,70 @@
+@font-face {
+	font-family: "Mother";
+	src: url('/fonts/apple_kid.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/apple_kid.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('/fonts/apple_kid.woff') format('woff'), /* Pretty Modern Browsers */
+	url('/fonts/apple_kid.ttf')  format('truetype'), /* Safari, Android, iOS */
+	url('/fonts/apple_kid.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {font-family: "A-Gigas"; src: url('/fonts/gasfont.ttf') format('truetype');}
+html{
+	width: 100%; height: 100%;
+	margin: 0; padding: 0;
+}
+html {text-align: center;}
+body {
+	position: relative; margin: 0 auto; margin-top: 2%;
+	font-family: 'Mother', sans-serif;
+	background-color: #E9DDC0;
+}
+img {image-rendering: crisp-edges; image-rendering: pixelated;}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+::-webkit-scrollbar {width: 1em;}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  position: relative; right: 10px;
+  background: #454545;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:hover {background: #333333;}
+::-webkit-scrollbar-thumb:active {background: #333333;}
+
+#none{Border-color: #2B2726; background-color: #3C352E;}
+#normal{Border-color: #F7DC07; background-color: #4B4314;}
+#strange{Border-color: #BB7343; background-color: #472B1F;}
+#unusual{Border-color: #835699; background-color: #372A3C;}
+#vintage{Border-color: #476291; background-color: #292D36;}
+#self-made{Border-color: #70B04A; background-color: #2B3E24;}
+
+.head-wrapper{
+	padding: 0.5em; margin-bottom: 20px;
+	background-color: #65684D; border-radius: 10px;
+	font-family: 'A-Gigas', 'Mother', sans-serif; color: #E9DDC0; font-size: 2em; text-shadow: 2px 2px #454545;
+}
+	.head-wrapper a {color: white; text-decoration: none; margin: 0 2px 0 2px;}
+	.head-wrapper a:hover {color: white;}
+	.head-wrapper .gg2s-small-logo{
+		-webkit-animation: spin 4s linear infinite;
+		-moz-animation: spin 4s linear infinite;
+		animation: spin 4s linear infinite;
+		width: 1em; height: 1em;
+	}
+	.head-gg2s-text img{margin-right: 5px;}
+
+.market-wrapper{border-radius: 10px; padding: 20px;}
+	
+.item-wrapper {display: inline-block; margin: 5px;}
+	.item-wrapper a {text-decoration: none;}
+.item-image-wrapper {
+	display: inline-block; width: 64px; height: 64px;
+	border: 5px solid; border-radius: 10px; margin-bottom: 5px;
+}
+	#item-image {width: 64px; height: 64px;}
+.item-price-wrapper {border-radius: 10px; background-color: #65684D;}
+	#item-price {font-family: 'A-Gigas', 'Mother', sans-serif; color: white; font-size: 22px;}

@@ -1,0 +1,223 @@
+#Memo for guestbook property class
+class MemoEntity(ndb.Model):
+	memo_id = ndb.IntegerProperty()
+	memo_author = ndb.StringProperty(indexed=False)
+	memo_content = ndb.TextProperty(indexed=False)
+	memo_google = ndb.UserProperty(indexed=False)
+	memo_date = ndb.DateTimeProperty(auto_now_add=True)
+	memo_reply = ndb.TextProperty(default='', indexed=False)
+
+#방명록페이지
+class MemoPage(webapp2.RequestHandler):
+	def get(self):
+		css = """
+			<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+			<style>
+				html{
+					display: table;
+					margin: auto;
+				}
+				body{
+					background-color: #454545;
+					color: white;
+					font-family: sans-serif, cursive;
+					display: table-cell;
+					vertical-align: middle;
+				}
+				p.logobig{
+					margin-top: 50px;
+					margin-bottom: 50px;
+				}
+				textarea{
+					margin-right: 20px;
+					resize: vertical;
+				}
+				div.motd{
+					border-bottom: 5px solid;
+					text-align: center;
+					margin-bottom: 20px;
+				}
+				div.memoform{
+					text-align: center;
+					margin-bottom: 60px;
+				}
+				p.memoes{
+					margin: auto;
+				}
+				div.memo{
+					text-align: left;
+					position: relative;
+					left: 0%;
+					width: 640px;
+					border: 1px solid;
+					line-height: 2;
+					margin-bottom: 20px;
+					padding-left: 30px;
+					padding-right: 30px;
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}
+				div.reply{
+					position: relative;
+					left: 10%;
+					width: 768px;
+					border: 1px solid;
+					line-height: 2;
+					margin-bottom: 20px;
+					padding-left: 30px;
+					padding-right: 30px;
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}
+				a.reply{
+					position: relative;
+					left: 570px;
+				}
+				a.delete{
+					position: relative;
+					left: 580px;
+				}
+			</style>
+		"""
+		html = '<html>'
+		html += '<HEAD>' + '<TITLE>GG2S:Memo</TITLE>' + css + '</HEAD>'
+		html += '<body>'
+		user = users.get_current_user()
+		#motd
+		html += '<div class="motd">'
+		html += '<p class="logobig">' + '<a href="/"><img src="/images/GG2SLogoBig.png"></a>' + '</p>'
+		html += '<p>' + "Welcome to GG2S!<br><br>Leave a message about recommendations or things you want to ask." + '</p>'
+		html += '</div>'
+		
+		#input form
+		html += '<div class="memoform">'
+		html += '<form method="POST">'
+		#nickname
+		html += '<p>'
+		if user:
+			user_list = ndb.gql('SELECT * FROM UserEntity WHERE google_id=:1', user)
+			if user_list:
+				for user in user_list:
+					html += 'NickName: ' + '<input type="text" name="author" maxlength="20" value="' + user.user_id + '">'
+			else:
+				html += 'NickName: ' + '<input type="text" name="author" maxlength="20">'
+		else:
+			html += 'NickName: ' + '<input type="text" name="author" maxlength="20">'
+		html += '</p>'
+		#content
+		html += '<textarea rows="3" cols="100" name="content" wrap="hard" maxlength="1000">' + '</textarea>'
+		html += '<input type="submit">'
+		html += '</form>'
+		html += '<a href="/" style="color:white;">Return To Main Page</a>'
+		html += '</div>'
+		
+		#memoes
+		html += '<p class="memoes">'
+		memo_list = ndb.gql('SELECT * FROM MemoEntity ORDER BY memo_date DESC')
+		cnt = 0
+		for memo in memo_list:
+			html += '<div class="memo">'
+			html += '<img src="/images/gg2slogo.png">' + str(memo.memo_id) + ' '
+			html += str(memo.memo_date).split('.')[0]
+			html += '<p class="author">' + memo.memo_author + '</p>'
+			html += '<p class="content" style="word-break:break_all;">' + memo.memo_content + '</p>'
+			if users.is_current_user_admin():
+				html += '<a class="reply" href="/replymemo?id=' + str(memo.memo_id) + '">' + '<img src="/images/buttons_reply.png"></a>'
+				html += '<a class="delete" href="/deletememo?id=' + str(memo.memo_id) + '">' + '<img src="/images/buttons_delete.png"></a>'
+			user = users.get_current_user()
+			if memo.memo_google == user:
+				html += '<a class="delete" href="/userdeletememo?id=' + str(memo.memo_id) + '">' + '<img src="/images/buttons_delete.png"></a>'
+			html += '</div>'
+			if memo.memo_reply:
+				html += '<div class="reply">'
+				html += '<img src="/images/gg2slogoadmin.png">' + ' '
+				html += '<p class="author">' + "WN" + '</p>'
+				html += '<p class="content">' + memo.memo_reply + '</p>'
+				html += '</div>'
+			cnt += 1
+			if cnt >= 10:
+				break
+		html += '</p>'
+		html += '</body>'
+		html += '</html>'
+		self.response.out.write(html)
+	
+	def post(self):
+		user = users.get_current_user()
+		memo_author = self.request.get('author')
+		memo_content = self.request.get('content')
+		memo = MemoEntity()
+		memo_list = ndb.gql('SELECT * FROM MemoEntity')
+		memo.memo_id = memo_list.count()
+		memo.memo_google = user
+		memo.memo_author = memo_author
+		memo_content = memo_content.replace('<', '&lt')
+		memo_content = memo_content.replace('>', '&gt')
+		memo_content = memo_content.replace('\n', '<br>')
+		memo.memo_content = memo_content
+		memo.put()
+		user_address = "WN <saiyu915@naver.com>"
+		sender_address = "GG2S Support <noreply@gg2statsapp.appspotmail.com>"
+		subject = memo_author + " has left a memo."
+		body = memo_author + " has left a memo:\n"
+		body += memo_content + "\n"
+		body += "https://gg2statsapp.appspot.com/memo"
+		mail.send_mail(sender_address, user_address, subject, body)
+		self.redirect('/memo')
+
+#댓글페이지
+class ReplyPage(webapp2.RequestHandler):
+	def get(self):
+		memo_id = self.request.get('id')
+		memo_list = ndb.gql('SELECT * FROM MemoEntity WHERE memo_id=' + memo_id)
+		html = '<html>'
+		for memo in memo_list:
+			html += '<form method="POST">'
+			html += '<input type="hidden" name="id">'
+			html += '<textarea rows="3" cols="100" name="reply" wrap="hard">' + '</textarea>'
+			html += '<input type="submit">'
+		self.response.out.write(html)
+		
+	def post(self):
+		memo_id = self.request.get('id')
+		reply = self.request.get('reply')
+		memo_list = ndb.gql('SELECT * FROM MemoEntity WHERE memo_id=' + memo_id)
+		for memo in memo_list:
+			reply = reply.replace('\n', '<br>')
+			memo.memo_reply = reply
+			user_address = memo.memo_author + ' <' + memo.memo_google.user_id() + '>'
+			sender_address = "GG2S Support <noreply@gg2statsapp.appspotmail.com>"
+			subject = "Your got reply from GG2S:MEMO."
+			body = "WN has left a reply:\n"
+			body += reply + "\n\n"
+			body += "see at: https://gg2statsapp.appspot.com/memo"
+			mail.send_mail(sender_address, user_address, subject, body)
+			memo.put()
+		self.redirect('/memo')
+		
+#삭제페이지
+class AdminDeletePage(webapp2.RequestHandler):
+	def get(self):
+		memo_id = self.request.get('id')
+		memo_list = ndb.gql('SELECT * FROM MemoEntity WHERE memo_id>=' + memo_id)
+		for memo in memo_list:
+			if memo.memo_id == int(memo_id):
+				ndb.Key(MemoEntity, memo.key.id()).delete()
+			else:
+				memo.memo_id -= 1
+				memo.put()
+		self.redirect('/memo')
+
+class UserDeletePage(webapp2.RequestHandler):
+	def get(self):
+		memo_id = self.request.get('id')
+		user = users.get_current_user()
+		memo_list = ndb.gql('SELECT * FROM MemoEntity WHERE memo_id=' + memo_id)
+		for memo in memo_list:
+			if memo.memo_google == user:
+				ndb.Key(MemoEntity, memo.key.id()).delete()
+				down_list = ndb.gql('SELECT * FROM MemoEntity WHERE memo_id>' + memo_id)
+				for down in down_list:
+					down.memo_id -= 1
+					down.put()
+		self.redirect('/memo')

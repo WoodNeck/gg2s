@@ -1,0 +1,51 @@
+{
+	all:{
+		0: NULL
+	},
+	0:{
+		0: Yellow_Shorts,
+		1: Night_Sheep_Boxer_Shorts,
+		2: Lighting_Speed,
+		3: Sanic_Leg
+	},
+	1:{
+		0: Gun_Shopper_Trousers,
+		1: Cybered_Legs,
+		2: Frog_Unicycle
+	},
+	2:{
+		0: Jumper_Jambeau,
+		1: Pharah_Pants
+	},
+	3:{
+		0: CMC_Trousers,
+		1: Sandal_Sorrow,
+		2: Winston_Leg_Armor,
+		3: Spiked_Dinosaur
+	},
+	4:{
+		0: Goldstrip_Pants,
+		1: Jacking_A_Sandal
+	},
+	5:{
+		0: Reaper_Pants,
+		1: Fine_Jeans,
+		2: Spinning_Wheel
+	},
+	6:{
+		0: Rocket_Boots,
+		1: Dalek_Base_Engi,
+		2: Humanoid_Front
+	},
+	7:{
+		0: Reaper_Pants_Spy,
+		1: Black_Dead_Pants,
+		2: Mr_Skeltal_Legs
+	},
+	8:{
+		0: NULL
+	},
+	9:{
+		0: NULL
+	}
+}

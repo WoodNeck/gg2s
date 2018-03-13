@@ -1,0 +1,16 @@
+{
+	0: Tea_ctics,
+	1: Who_Shall_Judge,
+	2: Gang_Star,
+	3: Bow_After_Whipping,
+	4: Plosiony_Cooly,
+	5: Nope,
+	6: Buy_Your_Life,
+	7: Balancer,
+	8: Dratuti,
+	9: Holy_Bible,
+	10: Rocket_Juggler,
+	11: Sizzling_Desire,
+	12: Unmasked,
+	13: Spoopy_Spoopy_Spoop
+}

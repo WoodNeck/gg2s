@@ -1,0 +1,4 @@
+{
+	present_possibility: 0.01,
+	item_version: 6
+}

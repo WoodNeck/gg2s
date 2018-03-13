@@ -1,0 +1,41 @@
+{
+	dropper: {
+		Earbud: 3
+	},
+	omnomnom: {
+		0: Healnomnom
+	},
+	stab: {
+		0: Backbone
+	},
+	bubble: {
+		0: Number_Bubble,
+		1: Overwatch_Ultimate_Bubbles,
+		2: MLG_Bubble
+	},
+	sentry: {
+		0: Auto_Turret
+	},
+	death: {
+		0: KO,
+		1: Rage_Kick,
+		2: Spy_Dive,
+		3: 1DOWN,
+		4: Death_Of_A_Cowboy,
+		5: Humanity_Stolen,
+		6: Bonetrousle
+	},
+	humiliation: {
+		0: Mental_Victory,
+		1: Lewis_Attack,
+		2: Wat_Da_Hell
+	},
+	pet: {
+		Kirby: '14211',
+		Chi_B_B_Hood: '44211',
+		Chatter_Leader: '10101',
+		Baked_Buddy: '12121',
+		Boo: '44140',
+		Shrek: '04241'
+	}
+}

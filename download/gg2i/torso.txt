@@ -1,0 +1,72 @@
+{
+	all: {
+		0: NULL
+	},
+	0: {
+		0: One_Line_Tshirt,
+		1: Night_Sheep_Pillow,
+		2: Punch_Smasher,
+		3: Sanic_Torso
+	},
+	1: {
+		0: Fallen_Angel,
+		1: Gun_Shopper_Pancho,
+		2: Cybered_Body,
+		3: Frog_Fake_Body
+	},
+	2: {
+		0: Alqafz_Armisonus,
+		1: Soldier_BackPack,
+		2: Pharah_Armor
+	},
+	3: {
+		0: CMC_Armor,
+		1: Arms_Of_Steel,
+		2: Winston_Armor,
+		3: Fishtank_Belly,
+		4: Franken_Heavy_Torso,
+		5: Shielded_Turtle,
+		6: Shrek_Body
+	},
+	4: {
+		0: Drifted_Plate,
+		1: Guard_Mines,
+		2: The_Decapitator,
+		3: Goldstrip_Armor,
+		4: Explosive_Cape,
+		5: Backer_Buff
+	},
+	5: {
+		0: The_Nonviolent,
+		1: Reaper_Cloak,
+		2: Guardian_Angel,
+		3: Mailman_Trench_Coat,
+		4: Robe_Of_The_High_Mage
+	},
+	6: {
+		0: Jetpack,
+		1: Outsmart_Mechanic,
+		2: Dalek_Body_Engi,
+		3: Brotherhood_Metal,
+		4: Checked_Shirts
+	},
+	7: {
+		0: Reaper_Cloak_Spy,
+		1: Bathrobe_Backstabber,
+		2: Borrowed_Jacket,
+		3: Distinguished_Rogue,
+		4: Beaver_Tail,
+		5: Black_Suit,
+		6: Bomb_Holder,
+		7: Mr_Skeltal_Body
+	},
+	8: {
+		0: Crocodile_Tail,
+		1: Wingman
+	},
+	9: {
+		0: Winter_Warmers_Shawl,
+		1: Lazy_Hoodie,
+		2: Animal_Crossing_Body
+	}
+}

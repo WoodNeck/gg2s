@@ -1,0 +1,188 @@
+i.proxy {
+  font-size: 100px;
+  color: white;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+/*	LEVEL	*/
+.overall-level {
+  font-size: 120px;
+  text-shadow: 4px 4px #306230;
+}
+.overall .title {
+  color: #0f380f;
+}
+
+/*	ACTIVITY LOG	*/
+.overall-activity i.log-page {font-size: 40px; cursor: context-menu; color: white;}
+.overall-activity i.log-page.active {cursor: pointer; color: #0f380f;}
+.activity-wrapper {
+  font-size: 40px;
+  background-color: #306230;
+  border-radius: 20px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  padding: 5px 20px 5px 20px;
+  box-shadow: 0 4px #000;
+  font-weight: normal;
+  text-align: left;
+}
+.activity-wrapper i {font-size: 20px; margin-right: 10px;}
+.activity-wrapper #none{color: #2B2726;}
+.activity-wrapper #normal{color: #F7DC07;}
+.activity-wrapper #strange{color: darkorange;}
+.activity-wrapper #unusual{color: #421C52; font-weight: bold; text-shadow: -1px 1px 4px #9C8AA5, 1px -1px 4px #9C8AA5;}
+.activity-wrapper #vintage{color: steelblue;}
+.activity-wrapper #self-made{color: #70B04A;}
+.activity-logs {text-align: center;}
+
+/*	TRADE	*/
+.overall-trade {position: relative; width: 100%;}
+.trade-wrapper {float: left; width: 20%; text-align: center;}
+.overall-trade a {text-decoration: none;}
+.trade-img {position: relative;}
+.trade-img img {
+	width: 128px;
+	height: 128px;
+	display: block;
+	margin: auto;
+}
+.trade-desc {
+	font-size: 30px;
+	text-shadow: 1px 1px #fff, -1px 1px #fff, 1px -1px #fff, -1px -1px #fff;
+	border-radius: 30px;
+	padding: 10px;
+	box-shadow: 0 4px #306230;
+	margin-bottom: 10px;
+}
+.trade-wrapper #none{color: #3C352E; background-color: #2B2726;}
+.trade-wrapper #normal{color: #4B4314; background-color: #F7DC07;}
+.trade-wrapper #strange{color: #472B1F; background-color: #BB7343;}
+.trade-wrapper #unusual{color: #372A3C;	background-color: #835699;}
+.trade-wrapper #vintage{color: #292D36;	background-color: #476291;}
+.trade-wrapper #self-made{color: #2B3E24; background-color: #70B04A;}
+.trade-coin {font-family: 'Press Start 2P', sans-serif; color: yellow; font-size: 20px; text-shadow: 3px 3px #306230;}
+
+/*	SKILL	*/
+.overall-skill {
+  clear: both;
+  float: left;
+  min-width: 33%;
+  width: 33%;
+  overflow: hidden;
+}
+.overall-skill .title {font-size: 40px;}
+.skill-wrapper {
+  font-size: 50px;
+  text-shadow: 4px 4px #306230;
+  margin-left: 30px;
+}
+
+/*	MATCH	*/
+.overall-match {float: left; width: 33%;}
+.overall-match .title {font-size: 40px;}
+.overall-match .match-wrapper {
+	font-size: 50px;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	padding: 0 20px 0 20px;
+	box-shadow: 0 4px #000;
+}
+.overall-match .match-result {float: left;}
+.overall-match .match-desc {text-align: right; font-weight: normal;}
+.overall-match #WIN {background-color: #0f380f;}
+.overall-match #LOSE {background-color: #306230;}
+.overall-match #DRAW {background-color: darkslategray;}
+.overall-match #DC {background-color: #123;}
+
+/*	REPLY	*/
+.overall-reply {
+	clear: both;
+	width: 100%;
+	font-size: 30px;
+}
+.overall-reply .title {font-size: 50px;}
+.overall-reply i.reply-page {color: white; font-size: 40px; cursor: context-menu;}
+.overall-reply i.reply-page.active {cursor: pointer; color: #0f380f;}
+.overall-reply .reply-replies {text-align: center;}
+.overall-reply .reply-wrapper {position: relative; text-align: left;}
+.overall-reply .reply-avatar {width: 64px; height: 64px; border-radius: 5px;}
+.overall-reply .reply-wrapper .reply-avatar {position: absolute;}
+.overall-reply .reply-id {position: absolute; left: 80px; font-size: 40px; text-shadow: 2px 2px #306230;}
+.overall-reply a{text-decoration: none; color: white;}
+.reply-wrapper#own {text-align: right;}
+.reply-wrapper#own .reply-id {right: 80px;}
+.reply-wrapper#own .reply-avatar {right: 0px;}
+.reply-wrapper#own .reply-content {text-align: left; left: -80px;}
+.reply-wrapper#own .reply-content:before {border: 0;}
+.reply-wrapper#own .reply-date{left: -80px;}
+.overall-reply .reply-content {
+	display: inline-block;
+	position: relative; max-width: 80%;
+	background-color: #336699;
+	padding: 10px;
+	border-radius: 5px;
+	left: 80px;
+	font-weight: normal;
+}
+.overall-reply .reply-content:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -10px;
+	top: 10px;
+	border: 5px solid;
+	border-color: #336699 #336699 transparent transparent;
+}
+.reply-content#owner {background-color: tomato;}
+.reply-content#owner:before {border-color: tomato tomato transparent transparent;}
+
+.overall-reply .reply-date {position: relative; font-size: 20px; padding: 5px; text-shadow: 2px 2px #306230; left: 80px;}
+.overall-reply .reply-check {position: relative; font-size: 20px; padding: 5px; text-shadow: 2px 2px #306230; left: 80px; color: yellow;}
+.overall-reply .reply-newreply {display: table; width: 100%;}
+.overall-reply .reply-newreply .reply-avatar-wrapper {display: table-cell; width: 64px; height: 64px; vertical-align: middle;}
+.overall-reply .reply-newreply .newreply-content-wrapper {display: table-cell; width: 100%; text-align: center; position: relative;}
+.overall-reply .reply-newreply .newreply-content {
+	position: relative;
+	background-color: transparent;
+	color: #0f380f;
+	border: 5px solid #0f380f;
+	border-radius: 5px;
+	resize: none;
+	outline: none;
+	width: 90%;
+	height: 60px;
+	font-family: 'Mother';
+	font-size: 30px;
+	padding: 10px;
+}
+.overall-reply .reply-newreply #newreply-counter {
+	position: absolute;
+	bottom: 5px;
+	right: 40px;
+	font-weight: normal;
+	color: white;
+}
+.reply-newreply i {
+	disply: table-cell;
+	vertical-align: middle;
+	text-shadow: 2px 2px #306230;
+	font-size: 40px;
+	width: 35px;
+	color: grey;
+	cursor: auto;
+}
+.reply-newreply i.ready {
+	color: white;
+	cursor: pointer;
+}
+::-webkit-input-placeholder {color: #306230;}
+:-moz-placeholder {color: #306230; opacity: 1;}
+::-moz-placeholder {color: #306230; opacity: 1;}
+:-ms-input-placeholder {color: #306230;}

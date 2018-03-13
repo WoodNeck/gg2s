@@ -1,0 +1,63 @@
+{
+	0:{
+		Peashooter: '0,0'
+	},
+	1:{
+		Candle_Lighter: '0,0',
+		Granny_Grazer: '0,0',
+		Flameburster: '0,0'
+	},
+	2:{
+		Small_Type_Rocket_Launcher: '0,0',
+		RPG: '0,0',
+		Rocket_Jumper: '0,0',
+		Innocent_Guardian: '0,0',
+		Space_Marine_Missile: '0,0',
+		Pharah_Rocket_Launcher: '0,0'
+	},
+	3:{
+		Widow_Er_Maker: '0,0',
+		M2_HB: '0,0',
+		Fire_Storm: '0,0',
+		Winston_Tesla_Cannon: '0,0',
+		Medic_Gun: '0,0',
+		Ishura: '0,0',
+		M60: '0,0',
+		Minilaser: '0,0'
+	},
+	4:{
+		Quickie_Bomb_Launcher: '0,0'
+	},
+	5:{
+		Caduceus_Combo: '8,2',
+		Improved_Medigun: '0,0'
+	},
+	6:{
+		Acid_Spray: '0,0',
+		Huntsuman: '0,2',
+		M12_Trench_Gun: '0,0',
+		Autogun_Gun: '0,0',
+		Exterminator: '0,2'
+	},
+	7:{
+		Colt_1851: '0,0',
+		Reaper_Hellfire_Shotgun: '3,6',
+		The_Unsleever: '0,0',
+		Mr_Skeltal_Trumpet: '0,0'
+	},
+	8:{
+		Pumpic_Air_Gun: '0,0',
+		Spotter: '0,0',
+		Biotic_Rifle: '0,0'
+	},
+	9:{
+		Fireball: '0,0',
+		Machine_Gun: '0,0',
+		Nemesis: '0,0',
+		Polar_Star: '0,0',
+		Snake: '0,0',
+		Spur: '0,0',
+		Rocket_Launcher: '0,0',
+		Super_Rocket_Launcher: '0,0'
+	}
+}

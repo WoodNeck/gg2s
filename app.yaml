@@ -1,0 +1,120 @@
+application: gg2statsapp
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /images
+  static_dir: images
+  application_readable: true
+
+- url: /fonts
+  static_dir: fonts
+
+- url: /charpart
+  static_dir: charpart
+
+- url: /itempart
+  static_dir: itempart
+
+- url: /weaponpart
+  static_dir: weaponpart
+
+- url: /tauntpart
+  static_dir: tauntpart
+
+- url: /itemthumb
+  static_dir: itemthumb
+
+- url: /clan
+  static_dir: clan
+
+- url: /achievement
+  static_dir: achievement
+
+- url: /download
+  static_dir: download
+
+- url: /js
+  static_dir: js
+
+- url: /css
+  static_dir: css
+
+- url: /myprofile
+  login: required
+  script: gg2stats.app
+
+- url: /profilesetting
+  login: required
+  script: gg2stats.app
+
+- url: /register
+  login: required
+  script: gg2stats.app
+
+- url: /memo
+  login: required
+  script: gg2stats.app
+
+- url: /itemupload
+  login: admin
+  script: gg2stats.app
+
+- url: /replymemo
+  login: admin
+  script: gg2stats.app
+
+- url: /deletememo
+  login: admin
+  script: gg2stats.app
+
+- url: /test
+  login: admin
+  script: gg2stats.app
+
+- url: /testupdate
+  login: admin
+  script: gg2stats.app
+  
+- url: /please
+  login: admin
+  script: gg2stats.app
+
+- url: /please2
+  login: admin
+  script: gg2stats.app
+
+- url: /please3
+  login: admin
+  script: gg2stats.app
+
+- url: /ban
+  login: admin
+  script: gg2stats.app  
+ 
+- url: /tasks/todayentity
+  script: gg2stats.app
+  login: admin
+
+- url: /tasks/makequest
+  script: gg2stats.app
+  login: admin
+
+- url: /tasks/deletetrade
+  script: gg2stats.app
+  login: admin
+
+- url: .*
+  script: gg2stats.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: PIL
+  version: latest

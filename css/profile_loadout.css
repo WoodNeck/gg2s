@@ -1,0 +1,33 @@
+.loadout-class-wrapper{display: inline-block;}
+.loadout-preview{display: inline-block; position: relative; width: 96px; height: 222px;}
+.loadout-items{display: inline-block;}
+
+.loadout-class-string{display: inline-block; width: 150px;}
+#class-string{font-family: 'A-Gigas', 'Mother', sans-serif; font-size: 32px; font-weight: normal;}
+
+.loadout-head, .loadout-torso, .loadout-leg{display: inline-block; width: 64px; height: 64px;}
+.loadout-weapon, .loadout-misc, .loadout-taunt{display: inline-block; width: 64px; height: 64px;}
+.loadout-pet, .loadout-death, .loadout-humiliation{display: inline-block; width: 64px; height: 64px;}
+
+.loadout-leg {Border: 5px solid transparent;}
+
+.loadout-image{width: 64px; height: 64px;}
+.loadout-preview-image{position: absolute; top: 74px; left: 0px; z-index: 1;}
+.loadout-preview-image#None{width: 64px; height: 64px; z-index: 1;}
+.loadout-preview-image#Scattergun{top: 108px; left: 22px; z-index: 1;}
+.loadout-preview-image#Flamethrower{top: 116px; left: 18px; z-index: 1;}
+.loadout-preview-image#Rocketlauncher{top: 104px; left: 14px; z-index: 1;}
+.loadout-preview-image#Minigun{top: 114px; left: 8px; z-index: 1;}
+.loadout-preview-image#Minegun{top: 112px; left: 28px; z-index: 1;}
+.loadout-preview-image#Medigun{top: 114px; left: 22px; z-index: 1;}
+.loadout-preview-image#Shotgun{top: 112px; left: 24px; z-index: 1;}
+.loadout-preview-image#Revolver{top: 108px; left: 22px; z-index: 1;}
+.loadout-preview-image#Rifle{top: 108px; left: 22px; z-index: 1;}
+.loadout-preview-image#Blade{top: 124px; left: 32px; z-index: 0;}
+
+.loadout-wrapper #none{Border: 5px solid #2B2726; background-color: #3C352E;}
+.loadout-wrapper #normal{Border: 5px solid #F7DC07; background-color: #4B4314;}
+.loadout-wrapper #strange{Border: 5px solid #BB7343; background-color: #472B1F;}
+.loadout-wrapper #unusual{Border: 5px solid #835699; background-color: #372A3C;}
+.loadout-wrapper #vintage{Border: 5px solid #476291; background-color: #292D36;}
+.loadout-wrapper #self-made{Border: 5px solid #70B04A; background-color: #2B3E24;}

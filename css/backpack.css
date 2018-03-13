@@ -1,0 +1,104 @@
+@font-face {
+	font-family: "Mother";
+	src: url('/fonts/apple_kid.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/apple_kid.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('/fonts/apple_kid.woff') format('woff'), /* Pretty Modern Browsers */
+	url('/fonts/apple_kid.ttf')  format('truetype'), /* Safari, Android, iOS */
+	url('/fonts/apple_kid.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {font-family: "A-Gigas"; src: url('/fonts/gasfont.ttf') format('truetype');}
+html{
+	width: 100%; height: 100%;
+	margin: 0; padding: 0;
+}
+html {text-align: center;}
+body {
+	width: 1200px;
+	position: relative; margin: 0 auto; margin-top: 2%;
+	font-family: 'Mother', sans-serif;
+	background-color: #E9DDC0;
+}
+img {image-rendering: crisp-edges; image-rendering: pixelated;}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+::-webkit-scrollbar {width: 1em;}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  position: relative; right: 10px;
+  background: #454545;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:hover {background: #333333;}
+::-webkit-scrollbar-thumb:active {background: #333333;}
+
+.head-wrapper{
+	padding: 0.5em; margin-bottom: 20px;
+	background-color: #65684D; border-radius: 10px;
+	font-family: 'A-Gigas', 'Mother', sans-serif; color: #E9DDC0; font-size: 2em; text-shadow: 2px 2px #454545;
+}
+	.head-wrapper a {color: white; text-decoration: none; margin: 0 2px 0 2px;}
+	.head-wrapper a:hover {color: white;}
+	.head-wrapper .gg2s-small-logo{
+		-webkit-animation: spin 4s linear infinite;
+		-moz-animation: spin 4s linear infinite;
+		animation: spin 4s linear infinite;
+		width: 1em; height: 1em;
+	}
+	.head-gg2s-text img{margin-right: 5px;}
+	
+.none{border: 5px solid #2B2726; background-color: #3C352E;}
+.normal{border: 5px solid #F7DC07; background-color: #4B4314;}
+.strange{border: 5px solid #BB7343;	background-color: #472B1F;}
+.unusual{border: 5px solid #835699;	background-color: #372A3C;}
+.vintage{border: 5px solid #476291;	background-color: #292D36;}
+.self-made{border: 5px solid #70B04A;	background-color: #2B3E24;}
+#trading{border-style: dashed;}
+
+.backpack-wrapper {
+	display: inline-block; position: relative; top: 0; padding: 10px 20px 10px 20px;
+	width: 1060px; height: 530px; overflow: hidden;
+	background-color: #2B2726; text-align: center;
+	border: 10px solid #221F1E; border-radius: 20px;
+}
+.backpack-page {position: absolute;}
+.backpack-wrapper .backpack-row {display: block; position: relative;}
+.backpack-wrapper .backpack-visible {visibility: visible;}
+.backpack-wrapper .backpack-invisible {visibility: hidden;}
+.backpack-wrapper img {width: 96px; height: 96px;}
+.backpack-wrapper .backpack-item {
+	display: inline-block; position: relative;
+	width: 96px; height: 96px; border-radius: 10px;
+}
+.backpack-wrapper .backpack-item a {display: inline-block; width: 96px; height: 96px;}
+.backpack-wrapper #trading img {-webkit-filter: opacity(50%); filter: opacity(50%);}
+.backpack-wrapper #trading:before{
+	content: ""; width: 96px; height: 96px;
+	position: absolute; border-radius: 10px;
+	background-color: rgba(20, 20, 20, 0.6);
+}
+.backpack-wrapper #trading:after{
+	position: absolute; top: 32px; left: 8px;
+	content: "TRADING"; font-family: 'A-Gigas', 'Mother', sans-serif;
+	font-size: 32px; color: white; text-shadow: 2px 2px #454545;
+}
+.backpack-selector {display: inline-block; position: relative; width: 100%;}
+.backpack-selector .selector-wrapper {
+	display: inline-block; position: relative; margin: 20px 10px 20px 10px; padding: 10px 20px 10px 20px;
+	font-family: 'A-Gigas', 'Mother', sans-serif;
+	font-size: 24px; color: white; text-shadow: 2px 2px #454545;
+	background-color: #838761; border-radius: 30px; cursor: pointer;
+}
+	.selector-wrapper.selected{background-color: #65684D;}
+	
+.backpack-menu-wrapper {
+	display: inline-block;
+	font-family: 'A-Gigas', 'Mother', sans-serif;
+	font-size: 32px; color: white; text-shadow: 2px 2px #454545;
+	background-color: #838761;
+}
+	.backpack-menu-wrapper a{color: white; text-decoration: none;}

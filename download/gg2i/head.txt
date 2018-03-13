@@ -1,0 +1,129 @@
+{
+	all:{
+		Layton_Top_Hat: '0,1,2,3,4,5,6,7,8,9',
+		FF_Blm_Hat: '0,1,2,3,4,5,6,7,8,9',
+		FF_Rdm_Hat: '0,1,2,3,4,5,6,7,8,9',
+		Plumber_Hat: '0,1,2,3,4,5,6,7,8,9',
+		Zelda_Cap: '0,1,2,3,4,5,6,7,8,9',
+		Point_And_Shoot: '0,1,2,3,4,5,6,7,8,9',
+		Phill_Hat: '0,1,2,3,4,5,6,7,8,9'
+	},
+	0:{
+		0: Hero_Muffler,
+		1: Headskin,
+		2: Night_Sheep_Hair,
+		3: Scout_Dog,
+		4: Ginger_Affro,
+		5: Nacer_Zone,
+		6: Sanic_Head,
+		7: Screen_Broker
+	},
+	1:{
+		0: Blazing_Bull,
+		1: Mr_Quackers,
+		2: Gun_Shopper_Hat,
+		3: Bright_Idea,
+		4: Three_Side_Burner,
+		5: Cybered_Head,
+		6: Frog_Head,
+		7: Frozen_Frost
+	},
+	2:{
+		0: M1_Kettle,
+		1: Killer_Kabuto,
+		2: Noise_Maker,
+		3: Pashion_Banner,
+		4: Security_Chief,
+		5: Batman,
+		6: Bionic_Helmet,
+		7: Crazy_Dave_Crazy_Pan,
+		8: Lumbricius_Lid,
+		9: Viking_Hat,
+		10: Dead_Space_Helmet,
+		11: Pirate_Hat,
+		12: Dapper_Topper,
+		13: Pharah_Helmet
+	},
+	3:{
+		0: CMC_Helmet,
+		1: Jaws_Of_Steel,
+		2: Mohawk,
+		3: Modern_Artist_Beanie,
+		4: Winston_Helmet,
+		5: Franken_Heavy_Head,
+		6: Sandwich_Invader,
+		7: Television_Head,
+		8: The_Tough_Bonnet,
+		9: Sandvich_Clever,
+		10: Shrek_Head,
+		11: Tortoise_Master
+	},
+	4:{
+		0: Wager_Of_Battle,
+		1: Demollishoner_Crown,
+		2: Asai_Simono,
+		3: Gentle_Bomber_Feather_Hat,
+		4: Double_Tail,
+		5: Jack_Lost_Hat,
+		6: Sultan_Ceremonial,
+		7: Tartan_Tyrolean,
+		8: The_Degroot_Expiriance,
+		9: The_Flying_Scottman
+	},
+	5:{
+		0: Ze_Doctor_Helm,
+		1: The_Advent,
+		2: Ze_Doctor_Helm,
+		3: Reaper_Hood,
+		4: Blighted_Beak,
+		5: Dude_Head,
+		6: Doc_Bubbler,
+		7: Franken_Medic,
+		8: Fancy_House_Haircut,
+		9: Sub_Scorpion
+	},
+	6:{
+		0: Servo_Arm,
+		1: Mr_Symphony,
+		2: Country_Horror,
+		3: Buffed_Constructor,
+		4: Dalek_Head_Engi
+	},
+	7:{
+		0: Gibus,
+		1: Horse_Head,
+		2: The_Myouri,
+		3: Reaper_Hood_Spy,
+		4: Nighttime_Slacker,
+		5: Assassin_Shine,
+		6: Unmasked_Spy,
+		7: Cowboy_Bonnet,
+		8: Part_Time_Wrestler,
+		9: Candy_Crown,
+		10: Chef_Hat,
+		11: Joker,
+		12: Bleed_Volkasia,
+		13: Mr_Skeltal_Head
+	},
+	8:{
+		0: Skull_Crack,
+		1: Tactical_Visor,
+		2: Cyborg_Murderer,
+		3: Christmas_Antlers,
+		4: Sniper_Electrical_Charge,
+		5: Winter_Marksman,
+		6: Corona_Australis,
+		7: Deep_Cover_Assassin,
+		8: Reversed_Shooter,
+		9: Rifle_Tor,
+		10: Yellow_Headband
+	},
+	9:{
+		0: Winter_Warmers_Hat,
+		1: Smiling_Skeleton,
+		2: Monomiter,
+		3: Poke_Ball,
+		4: Animal_Crossing_Head,
+		5: Littlely_Quiet
+	}
+}

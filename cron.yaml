@@ -1,0 +1,12 @@
+cron:
+- description: Reset TodayEntity
+  url: /tasks/todayentity
+  schedule: every day 07:00
+
+- description: Add daily quest
+  url: /tasks/makequest
+  schedule: every day 07:00
+
+- description: Delete expired trades
+  url: /tasks/deletetrade
+  schedule: every day 07:00

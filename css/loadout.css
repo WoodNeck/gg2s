@@ -1,0 +1,97 @@
+@font-face {
+	font-family: "Mother";
+	src: url('/fonts/apple_kid.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/apple_kid.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('/fonts/apple_kid.woff') format('woff'), /* Pretty Modern Browsers */
+	url('/fonts/apple_kid.ttf')  format('truetype'), /* Safari, Android, iOS */
+	url('/fonts/apple_kid.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {font-family: "A-Gigas"; src: url('/fonts/gasfont.ttf') format('truetype');}
+html{
+	width: 100%; height: 100%;
+	margin: 0; padding: 0;
+}
+html {text-align: center;}
+body {
+	width: 1200px;
+	position: relative; margin: 0 auto; margin-top: 2%;
+	font-family: 'A-Gigas', 'Mother', sans-serif; color: white;
+	background-color: #E9DDC0;
+}
+img {image-rendering: crisp-edges; image-rendering: pixelated;}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+::-webkit-scrollbar {width: 1em;}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  position: relative; right: 10px;
+  background: #454545;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:hover {background: #333333;}
+::-webkit-scrollbar-thumb:active {background: #333333;}
+
+.head-wrapper{
+	padding: 0.5em; margin-bottom: 20px;
+	background-color: #65684D; border-radius: 10px;
+	font-family: 'A-Gigas', 'Mother', sans-serif; color: #E9DDC0; font-size: 2em; text-shadow: 2px 2px #454545;
+}
+	.head-wrapper a {color: white; text-decoration: none; margin: 0 2px 0 2px;}
+	.head-wrapper a:hover {color: white;}
+	.head-wrapper .gg2s-small-logo{
+		-webkit-animation: spin 4s linear infinite;
+		-moz-animation: spin 4s linear infinite;
+		animation: spin 4s linear infinite;
+		width: 1em; height: 1em;
+	}
+	.head-gg2s-text img{margin-right: 5px;}
+
+.class-selector-wrapper {display: inline-block; background-color: #838761; border-radius: 10px; margin-bottom: 20px;}
+.class-selector-wrapper #class-icon {width: 48px; margin: 0 5px 0 5px;}
+
+.loadout-wrapper {display: inline-block; background-color: #2B2726; border-radius: 20px; padding: 11px 20px 20px 20px;}
+.loadout-wrapper span{position: absolute; font-size: 32px; top: 5px; left: 5px;}
+.loadout-wrapper a{display: inline-block;}
+
+.loadout-column-left{display: inline-block; width: 268px;}
+.loadout-column-middle{display: inline-block; width: 384px; height: 804px; position: relative;}
+	
+.loadout-column-right{display: inline-block; width: 268px;}
+
+.loadout-head, .loadout-torso, .loadout-leg{display: inline-block; border-radius: 10px; position: relative;}
+.loadout-weapon, .loadout-misc, .loadout-taunt{display: inline-block; border-radius: 10px; position: relative;}
+.loadout-pet, .loadout-death, .loadout-humiliation{display: inline-block; border-radius: 10px; position: relative;}
+
+.portrait-menu-wrapper{position: absolute; top: 64px; left: 0; width: 100%; text-align: center; z-index: 2;} 
+	.portrait-menu-wrapper span{position: initial; }
+	.portrait-menu-wrapper a{color: white; text-decoration: none;}
+.portrait-menu-team{display: inline-block; padding: 5px; border-radius: 10px; width: 80%; margin-bottom: 20px;}
+	.portrait-menu-team#red{background-color: tomato;}
+	.portrait-menu-team#blue{background-color: #336699;}
+.portrait-menu-taunt{display: inline-block; background-color: #65684D; padding: 5px; border-radius: 10px; width: 80%;}
+
+.loadout-image{width: 256px; height: 256px;}
+.loadout-preview-image{position: absolute; top: 128px; left: 0px;}
+.loadout-preview-image#None{width: 384px; height: 384px; z-index: 1;}
+.loadout-preview-image#Scattergun{top: 369px; left: 244px; transform: scaleX(6) scaleY(6); z-index: 1;}
+.loadout-preview-image#Flamethrower{top: 405px; left: 225px; transform: scaleX(6) scaleY(6); z-index: 1;}
+.loadout-preview-image#Rocketlauncher{top: 331px; left: 194px; transform: scaleX(6) scaleY(6); z-index: 1;}
+.loadout-preview-image#Minigun{top: 417px; left: 173px; transform: scaleX(6) scaleY(6); z-index: 1;}
+.loadout-preview-image#Minegun{top: 386px; left: 213px; transform: scaleX(6) scaleY(6); z-index: 1;}
+.loadout-preview-image#Medigun{top: 393px; left: 210px; transform: scaleX(6) scaleY(6); z-index: 1;}
+.loadout-preview-image#Shotgun{top: 381px; left: 262px; transform: scaleX(6) scaleY(6); z-index: 1;}
+.loadout-preview-image#Revolver{top: 360px; left: 250px; transform: scaleX(6) scaleY(6); z-index: 1;}
+.loadout-preview-image#Rifle{top: 350px; left: 211px; transform: scaleX(6) scaleY(6); z-index: 1;}
+.loadout-preview-image#Blade{top: 447px; left: 236px; transform: scaleX(6) scaleY(6); z-index: 0;}
+
+#none{border: 5px solid #2B2726; background-color: #3C352E;}
+#normal{border: 5px solid #F7DC07; background-color: #4B4314;}
+#strange{border: 5px solid #BB7343;	background-color: #472B1F;}
+#unusual{border: 5px solid #835699;	background-color: #372A3C;}
+#vintage{border: 5px solid #476291;	background-color: #292D36;}
+#self-made{border: 5px solid #70B04A;	background-color: #2B3E24;}
